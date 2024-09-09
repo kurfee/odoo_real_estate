@@ -36,7 +36,8 @@
 
                             <button name="action_view_approval" type="object" class="oe_stat_button"
                                     icon="fa-align-justify" string="Pending Approvals">
-                                <field name="approval_count" class="o_stat_value" string="Pending Approvals" widget="statinfo"/>
+                                <field name="approval_count" class="o_stat_value" string="Pending Approvals"
+                                       widget="statinfo"/>
                             </button>
 
                             <button name="action_view_offers" type="object" class="oe_stat_button" icon="fa-dollar"
@@ -96,8 +97,8 @@
                                         <field name="partner_id"/>
                                         <field name="validity"/>
                                         <field name="date_deadline"/>
-                                        <button name="action_accept"   type="object" icon="fa-check"/>
-                                        <button name="action_refuse"   type="object" icon="fa-times"/>
+                                        <button name="action_accept" type="object" icon="fa-check"/>
+                                        <button name="action_refuse" type="object" icon="fa-times"/>
                                         <field name="state" readonly="1"/>
                                     </tree>
                                 </field>
@@ -117,6 +118,19 @@
                     </div>
 
                 </form>
+            </field>
+        </record>
+
+        <!--        graph views -->
+        <record id="view_estate_property_graph" model="ir.ui.view">
+            <field name="name">estate.property.graph</field>
+            <field name="model">real.estate</field>
+            <field name="arch" type="xml">
+                <graph string="Properties Sold and Canceled" type="bar">
+                    <field name="state" type="row"/>
+                    <field name="id" type="measure"/>
+                    <field name="state"/>
+                </graph>
             </field>
         </record>
 
@@ -210,7 +224,7 @@
         <record id="action_property_list" model="ir.actions.act_window">
             <field name="name">Add Properties</field>
             <field name="res_model">real.estate</field>
-            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_mode">tree,form,kanban,graph,pivot</field>
             <field name="search_view_id" ref="view_real_estate_search"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">

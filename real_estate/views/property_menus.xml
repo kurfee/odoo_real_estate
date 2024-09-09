@@ -2,11 +2,12 @@
 <odoo>
 
     <!-- Main Menu Item -->
-    <menuitem id="menu_real_estate_root" name="Real state" sequence="10" web_icon="real_estate,static/description/icon.png"/>
+    <menuitem id="menu_real_estate_root" name="Real state" sequence="10"
+              web_icon="real_estate,static/description/icon.png"/>
 
     <!-- Submenu for Properties under the main menu -->
     <menuitem id="menu_real_estate_property"
-              name="Manage Properties"
+              name="Properties"
               parent="menu_real_estate_root"
               action="action_property_list"
               sequence="10"/>
@@ -15,18 +16,34 @@
     <menuitem id="estate_property_setting"
               name="Settings"
               parent="menu_real_estate_root"
-              sequence="12"
+              sequence="95"
     />
-
+    <menuitem id="estate_property_sales"
+              name="Sales and Rentals"
+              parent="menu_real_estate_root"
+    />
     <!-- Submenu for Properties  -->
     <menuitem id="menu_real_estate_property_config"
               name="Configuration"
               parent="menu_real_estate_root"
               sequence="100"/>
 
+    <menuitem id="estate_property_contracts"
+              name="Contract Management"
+              parent="menu_real_estate_root"
+
+    />
+
+    <!--    graph view menu -->
+<!--    <menuitem id="menu_estate_property_graph"-->
+<!--              name="Properties Graph"-->
+<!--              parent="menu_real_estate_root"-->
+<!--              action="action_property_list"-->
+<!--    />-->
+
     <!-- Submenu for Properties  -->
     <menuitem id="menu_real_estate_property_reporting"
-              name="Reporting"
+              name="Analysis and Reporting"
               parent="menu_real_estate_root"
               sequence="90"/>
 
@@ -64,12 +81,13 @@
               parent="estate_property_setting"
               action="action_property_type"/>
 
-<!--    &lt;!&ndash;    pivot views most be called as to the odoo menu&ndash;&gt;-->
+    <!--   pivot views most be called as to the odoo menu-->
 <!--    <menuitem id="menu_real_estate_pivot"-->
-<!--              name="Real Estate Analysis"-->
+<!--              name="Pivot View"-->
 <!--              parent="menu_real_estate_root"-->
 <!--              action="action_property_list"-->
-<!--              sequence="100"/>-->
+<!--              sequence="100"-->
+<!--              groups="base.group_system"/>-->
 
 
 </odoo>
