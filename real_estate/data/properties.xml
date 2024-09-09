@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="estate_property_1" model="real.estate">
+            <field name="name">MJ Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_2" model="real.estate">
+            <field name="name">Nana Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_3" model="real.estate">
+            <field name="name">Mo Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_4" model="real.estate">
+            <field name="name">Ananth Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_5" model="real.estate">
+            <field name="name">Naseer Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_6" model="real.estate">
+            <field name="name">Charan Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_7" model="real.estate">
+            <field name="name">Yahya Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_8" model="real.estate">
+            <field name="name">MJ Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_9" model="real.estate">
+            <field name="name">MJ Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">55000</field>
+
+        </record>
+        <record id="estate_property_10" model="real.estate">
+            <field name="name">Abdo Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">35000</field>
+
+        </record>
+        <record id="estate_property_11" model="real.estate">
+            <field name="name">Anil Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">10000</field>
+
+        </record>
+        <record id="estate_property_12" model="real.estate">
+            <field name="name">Ahemd Homes</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">50</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">15000</field>
+
+        </record>
+        <record id="estate_property_13" model="real.estate">
+            <field name="name">ALi</field>
+            <field name="description">Gulshan</field>
+            <field name="bedrooms">10</field>
+            <field name="living_area">400</field>
+            <field name="garden_area">50</field>
+            <field name="expected_price">25000</field>
+         
+        </record>
+
+
+
+
+
+
+    </data>
+</odoo>

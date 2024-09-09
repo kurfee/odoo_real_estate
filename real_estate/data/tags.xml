@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <!-- Define Tags -->
+        <record id="estate_tag_luxury" model="estate.property.tag">
+            <field name="name">Luxury</field>
+        </record>
+
+        <record id="estate_tag_new" model="estate.property.tag">
+            <field name="name">Newly Renovated</field>
+        </record>
+
+        <record id="estate_tag_sea_view" model="estate.property.tag">
+            <field name="name">Sea View</field>
+        </record>
+
+        <record id="estate_tag_garden" model="estate.property.tag">
+            <field name="name">Garden</field>
+        </record>
+
+        <record id="estate_tag_cozy" model="estate.property.tag">
+            <field name="name">Cozy</field>
+        </record>
+    </data>
+</odoo>

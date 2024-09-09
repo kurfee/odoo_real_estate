@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--        we need to define the user group to our model-->
+        <record id="module_category_real_estate" model="ir.module.category">
+            <field name="name">Real Estate</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="group_property_marketing" model="res.groups">
+            <field name="name">Marketing</field>
+            <field name="category_id" ref="real_estate.module_category_real_estate"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">the user will have access to his own data in the Real Estate application.</field>
+        </record>
+
+
+        <record id="group_property_sales" model="res.groups">
+            <field name="name">Sales</field>
+            <field name="category_id" ref="real_estate.module_category_real_estate"/>
+            <field name="implied_ids" eval="[(4, ref('real_estate.group_property_marketing'))]"/>
+            <field name="comment">the user will have access to his own data in the Real Estate application.</field>
+        </record>
+
+
+        <record id="group_property_admin" model="res.groups">
+            <field name="name">administrator</field>
+            <field name="category_id" ref="real_estate.module_category_real_estate"/>
+
+            <field name="implied_ids" eval="[(4, ref('real_estate.group_property_sales'))]"/>
+            <field name="comment">the user will have access to all data in the Real Estate application.</field>
+        </record>
+
+        <!--        creating a recode rules for every user to make put them in check what to see what not to see-->
+
+        <record id="ir_property_users_real_estate_rule" model="ir.rule">
+            <field name="name">Property user can view their own records</field>
+            <field name="model_id" ref="model_real_estate"/>
+            <field name="groups" eval="[(4, ref('real_estate.group_property_sales'))]"/>
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        </record>
+    </data>
+</odoo>

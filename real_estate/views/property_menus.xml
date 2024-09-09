@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Main Menu Item -->
+    <menuitem id="menu_real_estate_root" name="Real state" sequence="10" web_icon="real_estate,static/description/icon.png"/>
+
+    <!-- Submenu for Properties under the main menu -->
+    <menuitem id="menu_real_estate_property"
+              name="Manage Properties"
+              parent="menu_real_estate_root"
+              action="action_property_list"
+              sequence="10"/>
+
+    <!-- Submenu for Properties under the main menu -->
+    <menuitem id="estate_property_setting"
+              name="Settings"
+              parent="menu_real_estate_root"
+              sequence="12"
+    />
+
+    <!-- Submenu for Properties  -->
+    <menuitem id="menu_real_estate_property_config"
+              name="Configuration"
+              parent="menu_real_estate_root"
+              sequence="100"/>
+
+    <!-- Submenu for Properties  -->
+    <menuitem id="menu_real_estate_property_reporting"
+              name="Reporting"
+              parent="menu_real_estate_root"
+              sequence="90"/>
+
+    <!--     Submenu for report  -->
+    <menuitem id="estate_property_pdf"
+              name="Inverse"
+              parent="menu_real_estate_property_reporting"
+              action="action_property_inverse"
+              sequence="5"/>
+
+
+    <!--     Submenu for confi  -->
+    <menuitem id="estate_property_find"
+              name="Find A Property"
+              parent="menu_real_estate_property_config"
+              action="action_property_tag"
+              sequence="5"/>
+
+    <!--     Submenu for confi  -->
+    <menuitem id="estate_property_broker"
+              name="Find a Broker"
+              parent="menu_real_estate_property_config"
+              action="action_property_tag"
+    />
+
+    <!--     Submenu for setting  -->
+    <menuitem id="menu_estate_tag"
+              name="Property Tag"
+              parent="estate_property_setting"
+              action="action_property_tag"/>
+
+    <!--     Submenu for setting  -->
+    <menuitem id="menu_estate_type"
+              name="Property Type"
+              parent="estate_property_setting"
+              action="action_property_type"/>
+
+<!--    &lt;!&ndash;    pivot views most be called as to the odoo menu&ndash;&gt;-->
+<!--    <menuitem id="menu_real_estate_pivot"-->
+<!--              name="Real Estate Analysis"-->
+<!--              parent="menu_real_estate_root"-->
+<!--              action="action_property_list"-->
+<!--              sequence="100"/>-->
+
+
+</odoo>
