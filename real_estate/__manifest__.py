@@ -1,0 +1,31 @@
+{
+    'name': 'Real Estate',
+    'author': 'Abdalrhman Abdalla',
+    'summary': 'A Real Estate App that was built to help all the real estate agents in achieving a success',
+    'category': 'Business',
+    'license': 'LGPL-3',
+    'version': '1.0',
+    'depends': ['website',
+                'mail'],
+    'data': [
+        'security/ir.model.access.csv',
+        'security/security.xml',
+        'reports/property_card.xml',
+        'reports/report.xml',
+        'data/tags.xml',
+        'data/types.xml',
+        'data/properties.xml',
+        'views/offers.xml',
+        'views/inversese.xml',
+        'views/property_views.xml',
+        'views/estate_tag.xml',
+        'views/estate_type.xml',
+        'views/property_menus.xml',
+
+    ],
+    'installable': True,
+    'application': True,
+    'auto_installable': False,
+    'images': ['static/description/icon.png'
+               ],
+    }

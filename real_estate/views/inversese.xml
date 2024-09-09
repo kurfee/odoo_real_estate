@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="estate_inverse_tree" model="ir.ui.view">
+        <field name="name">Estate inverse Tree View</field>
+        <field name="model">ttoota.test</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="unit_price"/>
+                <field name="quantity"/>
+                <field name="total_price"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="estate_inverse_form" model="ir.ui.view">
+        <field name="name">Estate inverse Form View</field>
+        <field name="model">ttoota.test</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="unit_price"/>
+                        <field name="quantity"/>
+                        <field name="total_price"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_property_inverse" model="ir.actions.act_window">
+        <field name="name">Add inverse</field>
+        <field name="res_model">ttoota.test</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new property inverse function.
+            </p>
+        </field>
+    </record>
+
+</odoo>
