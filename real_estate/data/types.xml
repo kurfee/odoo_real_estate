@@ -16,5 +16,33 @@
         <record id="property_type_commercial" model="estate.property.type">
             <field name="name">Commercial</field>
         </record>
+        <record id="property_type_house" model="estate.property.type">
+            <field name="name">Condo</field>
+        </record>
+        <record id="property_type_singlefa" model="estate.property.type">
+            <field name="name">Single-Family Home</field>
+        </record>
+        <record id="property_type_duplex" model="estate.property.type">
+            <field name="name">Duplex</field>
+        </record>
+        <record id="property_type_loft" model="estate.property.type">
+            <field name="name">Loft</field>
+        </record>
+        <record id="property_type_studio" model="estate.property.type">
+            <field name="name">Studio</field>
+        </record>
+        <record id="property_type_penthouse" model="estate.property.type">
+            <field name="name">Penthouse</field>
+        </record>
+        <record id="property_type_cottage" model="estate.property.type">
+            <field name="name">Cottage</field>
+        </record>
+        <record id="property_type_bungalow" model="estate.property.type">
+            <field name="name">Bungalow</field>
+        </record>
+        <record id="property_type_townhouse" model="estate.property.type">
+            <field name="name">Townhouse</field>
+        </record>
+
     </data>
 </odoo>

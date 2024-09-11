@@ -5,6 +5,13 @@
     <menuitem id="menu_real_estate_root" name="Real state" sequence="10"
               web_icon="real_estate,static/description/icon.png"/>
 
+     <menuitem id="menu_dashboard"
+              name="Dashboard"
+              parent="menu_real_estate_root"
+              action="action_estate_dashboard"
+               sequence="1"
+             />
+
     <!-- Submenu for Properties under the main menu -->
     <menuitem id="menu_real_estate_property"
               name="Properties"
@@ -35,11 +42,11 @@
     />
 
     <!--    graph view menu -->
-<!--    <menuitem id="menu_estate_property_graph"-->
-<!--              name="Properties Graph"-->
-<!--              parent="menu_real_estate_root"-->
-<!--              action="action_property_list"-->
-<!--    />-->
+    <!--    <menuitem id="menu_estate_property_graph"-->
+    <!--              name="Properties Graph"-->
+    <!--              parent="menu_real_estate_root"-->
+    <!--              action="action_property_list"-->
+    <!--    />-->
 
     <!-- Submenu for Properties  -->
     <menuitem id="menu_real_estate_property_reporting"
@@ -52,7 +59,7 @@
               name="Inverse"
               parent="menu_real_estate_property_reporting"
               action="action_property_inverse"
-              sequence="5"/>
+              />
 
 
     <!--     Submenu for confi  -->
@@ -60,7 +67,7 @@
               name="Find A Property"
               parent="menu_real_estate_property_config"
               action="action_property_tag"
-              sequence="5"/>
+              />
 
     <!--     Submenu for confi  -->
     <menuitem id="estate_property_broker"
@@ -82,12 +89,12 @@
               action="action_property_type"/>
 
     <!--   pivot views most be called as to the odoo menu-->
-<!--    <menuitem id="menu_real_estate_pivot"-->
-<!--              name="Pivot View"-->
-<!--              parent="menu_real_estate_root"-->
-<!--              action="action_property_list"-->
-<!--              sequence="100"-->
-<!--              groups="base.group_system"/>-->
+    <!--    <menuitem id="menu_real_estate_pivot"-->
+    <!--              name="Pivot View"-->
+    <!--              parent="menu_real_estate_root"-->
+    <!--              action="action_property_list"-->
+    <!--              sequence="100"-->
+    <!--              groups="base.group_system"/>-->
 
 
 </odoo>
