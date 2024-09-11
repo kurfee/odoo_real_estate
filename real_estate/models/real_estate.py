@@ -142,24 +142,3 @@ class Property(models.Model):
             self.mature = True
         else:
             self.mature = ''
-
-
-class Test(models.Model):
-    _name = 'test.school'
-
-    school_test_id = fields.Many2one('real.estate')
-    product_id = fields.Many2one('product.product', string='Product')
-    price = fields.Float('price')
-    total_id = fields.Float('Total')
-    quantity_id = fields.Float('Quantity')
-
-    @api.onchange('quantity_id', 'price')
-    def totalPrice(self):
-        for order in self:
-            order.total_id = order.quantity_id * order.price
-
-    @api.onchange('product_id')
-    def price_total(self):
-        for order in self:
-            if order.product_id:
-                order.price = order.product_id.standard_price

@@ -18,7 +18,6 @@
                 </tree>
             </field>
         </record>
-
         <!--    Form views -->
         <record id="real_estate_form" model="ir.ui.view">
             <field name="name">real estate Form View</field>
@@ -26,14 +25,12 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-                        <!--                        smart buttons -->
-
+                        <!-- smart buttons -->
                         <div name="button_box" position="inside">
                             <button name="action_view_doc" type="object" class="oe_stat_button" icon="fa-file-text"
                                     string="Documents">
                                 <field name="doc_count" class="o_stat_value" string="Documents" widget="statinfo"/>
                             </button>
-
                             <button name="action_view_approval" type="object" class="oe_stat_button"
                                     icon="fa-align-justify" string="Pending Approvals">
                                 <field name="approval_count" class="o_stat_value" string="Pending Approvals"
@@ -47,10 +44,8 @@
 
                         </div>
                         <header>
-
                             <button name="action_set_sold" type="object" string="Sold" class="btn-primary" primary="1"/>
                             <button name="action_cancel" type="object" string="Canceled" class="btn-secondary"/>
-                            <button name="%(estate_property_xlsx_report)d" string="Download Excel Report" type="object"/>
 
                         </header>
                         <div class="button" widget="priority">
@@ -68,13 +63,9 @@
 
                             </group>
                             <group>
-
                                 <field name="expected_price"/>
                                 <field name="best_price"/>
                                 <field name="selling_price" readonly="1"/>
-
-                                <!--                            <field name="age"/>-->
-                                <!--                            <field name="mature"/>-->
                             </group>
                         </group>
                         <notebook>

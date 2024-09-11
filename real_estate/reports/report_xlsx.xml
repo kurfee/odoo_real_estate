@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Action to trigger XLSX report -->
+        <record id="action_real_estate_xlsx_report" model="ir.actions.report">
+            <field name="name">Real Estate XLSX Report</field>
+            <field name="model">real.estate</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">real_estate.report_xlsx</field>
+            <field name="file">real_estate_report</field>
+            <field name="binding_model_id" ref="model_real_estate"/>
+        </record>
+
+    </data>
+</odoo>

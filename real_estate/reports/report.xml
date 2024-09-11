@@ -9,7 +9,7 @@
             <field name="report_file">real_estate.property_report</field>
             <field name="binding_model_id" ref="real_estate.model_real_estate"/>
             <field name="binding_type">report</field>
-
         </record>
+
     </data>
 </odoo>

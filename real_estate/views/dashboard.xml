@@ -26,11 +26,8 @@
         <field name="model">board.board</field>
         <field name="arch" type="xml">
             <form string="Dashboard">
-                <board style="1">
+                <board style="2-1">
                     <column>
-                        <action
-                                string="Properties Types"
-                                name="%(act_estate_types)d"/>
                         <action
                                 string="Sold Properties"
                                 name="%(act_estate_sold)d"/>

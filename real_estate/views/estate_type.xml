@@ -28,7 +28,7 @@
     <record id="action_property_type" model="ir.actions.act_window">
         <field name="name">Add Type</field>
         <field name="res_model">estate.property.type</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,graph</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 Click to create a new property type.
@@ -36,14 +36,14 @@
         </field>
     </record>
 
-<!-- we don't do that again -->
+    <!-- we don't do that again -->
 
 
-<!--    &lt;!&ndash; Submenu for Properties under the main menu &ndash;&gt;-->
-<!--    <menuitem id="menu_real_estate_property_type"-->
-<!--              name="Property Type"-->
-<!--              parent="menu_real_estate_property_setting"-->
-<!--              action="action_property_type"/>-->
+    <!--    &lt;!&ndash; Submenu for Properties under the main menu &ndash;&gt;-->
+    <!--    <menuitem id="menu_real_estate_property_type"-->
+    <!--              name="Property Type"-->
+    <!--              parent="menu_real_estate_property_setting"-->
+    <!--              action="action_property_type"/>-->
 
 
 </odoo>
