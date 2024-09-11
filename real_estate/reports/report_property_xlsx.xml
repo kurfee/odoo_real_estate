@@ -1,0 +1,12 @@
+
+<odoo>
+    <report
+        id="real_estate_xlsx_report"
+        model="real.estate"
+        string="Real Estate Excel Report"
+        report_type="xlsx"
+        name="real_estate.report_property_xlsx"
+        file="real_estate_report"
+    />
+</odoo>
+

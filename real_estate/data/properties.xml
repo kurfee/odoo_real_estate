@@ -5,124 +5,130 @@
             <field name="name">MJ Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">800</field>
+            <field name="postcode">60603</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">105000</field>
         </record>
+
         <record id="estate_property_2" model="real.estate">
             <field name="name">Nana Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">290</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">505000</field>
+            <field name="postcode">30301</field>
         </record>
+
         <record id="estate_property_3" model="real.estate">
             <field name="name">Mo Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">550</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">255000</field>
+            <field name="postcode">90001</field>
         </record>
+
         <record id="estate_property_4" model="real.estate">
             <field name="name">Ananth Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">750</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">650000</field>
+            <field name="postcode">33101</field>
         </record>
+
         <record id="estate_property_5" model="real.estate">
             <field name="name">Naseer Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">700</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">700000</field>
+            <field name="postcode">75201</field>
         </record>
+
         <record id="estate_property_6" model="real.estate">
             <field name="name">Charan Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">3900</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">500900</field>
         </record>
+
         <record id="estate_property_7" model="real.estate">
             <field name="name">Yahya Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">4000</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">123000</field>
+            <field name="postcode">48201</field>
         </record>
+
         <record id="estate_property_8" model="real.estate">
             <field name="name">MJ Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">1000</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">1400000</field>
+            <field name="postcode">75201</field>
         </record>
+
         <record id="estate_property_9" model="real.estate">
             <field name="name">MJ Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">900</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">55000</field>
-
+            <field name="expected_price">243000</field>
+            <field name="postcode">02108</field>
         </record>
+
         <record id="estate_property_10" model="real.estate">
             <field name="name">Abdo Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">750</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">35000</field>
-
+            <field name="expected_price">350000</field>
+            <field name="postcode">90001</field>
         </record>
+
         <record id="estate_property_11" model="real.estate">
             <field name="name">Anil Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">650</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">10000</field>
-
+            <field name="expected_price">1000000</field>
+            <field name="postcode">48201</field>
         </record>
+
         <record id="estate_property_12" model="real.estate">
             <field name="name">Ahemd Homes</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">50</field>
-            <field name="living_area">400</field>
+            <field name="living_area">2000</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">15000</field>
-
+            <field name="expected_price">1500000</field>
+            <field name="postcode">98101</field>
         </record>
+
         <record id="estate_property_13" model="real.estate">
             <field name="name">ALi</field>
             <field name="description">Gulshan</field>
             <field name="bedrooms">10</field>
-            <field name="living_area">400</field>
+            <field name="living_area">3500</field>
             <field name="garden_area">50</field>
-            <field name="expected_price">25000</field>
-         
+            <field name="expected_price">2500000</field>
+            <field name="postcode">75201</field>
         </record>
-
-
-
-
-
 
     </data>
 </odoo>

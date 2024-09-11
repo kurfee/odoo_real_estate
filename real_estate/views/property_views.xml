@@ -44,10 +44,14 @@
                                     string="Offers">
                                 <field name="offer_count" class="o_stat_value" string="Offers" widget="statinfo"/>
                             </button>
+
                         </div>
                         <header>
+
                             <button name="action_set_sold" type="object" string="Sold" class="btn-primary" primary="1"/>
                             <button name="action_cancel" type="object" string="Canceled" class="btn-secondary"/>
+                            <button name="%(estate_property_xlsx_report)d" string="Download Excel Report" type="object"/>
+
                         </header>
                         <div class="button" widget="priority">
                             <h1>

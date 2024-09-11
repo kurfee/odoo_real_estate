@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="act_estate_types" model="ir.actions.act_window">
+        <field name="name">Types of Property</field>
+        <field name="res_model">estate.property.type</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="act_estate_sold" model="ir.actions.act_window">
+        <field name="name">Sold Properties</field>
+        <field name="res_model">real.estate</field>
+        <field name="view_mode">graph</field>
+
+    </record>
+
+    <record id="act_estate_canceled" model="ir.actions.act_window">
+        <field name="name"> Canceled Properties</field>
+        <field name="res_model">real.estate</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+
+    <record id="dashboard_form_view" model="ir.ui.view">
+        <field name="name">Dashboard Form</field>
+        <field name="model">board.board</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <board style="1">
+                    <column>
+                        <action
+                                string="Properties Types"
+                                name="%(act_estate_types)d"/>
+                        <action
+                                string="Sold Properties"
+                                name="%(act_estate_sold)d"/>
+                        <action
+                                string="Canceled Properties"
+                                name="%(act_estate_canceled)d"/>
+                    </column>
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_estate_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="dashboard_form_view"/>
+    </record>
+
+
+
+
+</odoo>
