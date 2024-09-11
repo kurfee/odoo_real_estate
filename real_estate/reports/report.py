@@ -1,29 +1,35 @@
+from odoo import models
+from odoo.exceptions import UserError
 import io
 import xlsxwriter
-from odoo import models
 
-class RealEstateExcelReport(models.AbstractModel):
-    _name = 'report.real_estate.report_property_xlsx'
-    _description = 'Real Estate Excel Report'
+class RealEstateXlsxReport(models.AbstractModel):
+    _name = 'report.real_estate.report_xlsx'
+    _description = 'Real Estate XLSX Report'
+    _inherit = 'report.report_xlsx'
 
-    def generate_xlsx_report(self, data, objects):
-        output = io.BytesIO()
-        workbook = xlsxwriter.Workbook(output)
-        worksheet = workbook.add_worksheet()
+    def generate_xlsx_report(self, workbook, data, properties):
+        # Create a new Excel sheet
+        sheet = workbook.add_worksheet('Real Estate Report')
 
-        # Set headers
-        headers = ['ID', 'Name', 'Price', 'Status']
-        worksheet.write_row(0, 0, headers)
+        # Define formats
+        bold = workbook.add_format({'bold': True})
 
-        # Write data for each real estate property
+        # Define headers
+        headers = ['Property Name', 'Selling Price', 'Buyer', 'State']
+        sheet.write_row(0, 0, headers, bold)
+
+        # Write data to the sheet
         row = 1
-        for obj in objects:
-            worksheet.write(row, 0, obj.id)
-            worksheet.write(row, 1, obj.name)
-            worksheet.write(row, 2, obj.price)
-            worksheet.write(row, 3, obj.state)
+        for property in properties:
+            sheet.write(row, 0, property.name)
+            sheet.write(row, 1, property.price)
+            sheet.write(row, 2, property.buyer_id.name or '')
+            sheet.write(row, 3, property.state)
             row += 1
 
-        workbook.close()
-        output.seek(0)
-        return output.getvalue()
+        if row == 1:
+            raise UserError("No data found for the report.")
+
+        # Optional: You can add more formatting or conditional formatting here
+
