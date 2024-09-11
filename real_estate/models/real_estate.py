@@ -24,7 +24,6 @@ class Property(models.Model):
     garden = fields.Boolean(string="Has Garden?")
     garden_area = fields.Integer(string="Garden Area (sqm)")
     total_area = fields.Integer(string="Total Area (sqm)", compute='_total_area')
-    real_state_ids = fields.One2many('test.school', 'school_test_id')
     offers_ids = fields.One2many('estate.offers', 'property_id')
     garden_orientation = fields.Selection([
         ('north', 'North'),

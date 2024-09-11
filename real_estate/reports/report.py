@@ -6,7 +6,7 @@ import xlsxwriter
 class RealEstateXlsxReport(models.AbstractModel):
     _name = 'report.real_estate.report_xlsx'
     _description = 'Real Estate XLSX Report'
-    _inherit = 'report.report_xlsx'
+    # _inherit = 'report.report_xlsx'
 
     def generate_xlsx_report(self, workbook, data, properties):
         # Create a new Excel sheet

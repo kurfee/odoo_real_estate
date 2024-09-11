@@ -54,12 +54,6 @@
               parent="menu_real_estate_root"
               sequence="90"/>
 
-    <!--     Submenu for report  -->
-    <menuitem id="estate_property_pdf"
-              name="Inverse"
-              parent="menu_real_estate_property_reporting"
-              action="action_property_inverse"
-              />
 
 
     <!--     Submenu for confi  -->
