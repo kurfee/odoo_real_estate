@@ -36,13 +36,17 @@
                                 <field name="approval_count" class="o_stat_value" string="Pending Approvals"
                                        widget="statinfo"/>
                             </button>
-
                             <button name="action_view_offers" type="object" class="oe_stat_button" icon="fa-dollar"
                                     string="Offers">
                                 <field name="offer_count" class="o_stat_value" string="Offers" widget="statinfo"/>
                             </button>
 
+                            <button name="action_generate_excel_report" type="object" string="Print Excel Sheet"
+                                    icon="fa-download"/>
+
+
                         </div>
+
                         <header>
                             <button name="action_set_sold" type="object" string="Sold" class="btn-primary" primary="1"/>
                             <button name="action_cancel" type="object" string="Canceled" class="btn-secondary"/>

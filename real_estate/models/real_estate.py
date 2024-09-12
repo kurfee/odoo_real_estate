@@ -1,5 +1,10 @@
-from odoo import models, fields, api
+import base64
+
+from odoo import models, fields, api, http
 from odoo.exceptions import UserError, ValidationError
+import io
+import xlsxwriter
+from odoo.http import request
 
 
 class Property(models.Model):
@@ -48,8 +53,6 @@ class Property(models.Model):
     offer_count = fields.Integer(string=" Offers", compute="_compute_offer_count", store=True)
     doc_count = fields.Integer(string=" Documents", store=True)
     approval_count = fields.Integer(string=" Pending Approvals", store=True)
-
-
 
     @api.depends('offers_ids')
     def _compute_offer_count(self):
@@ -119,6 +122,10 @@ class Property(models.Model):
                 raise UserError("Canceled property cannot be set as sold.")
             record.state = 'sold'
 
+    # this is a function for the button to print the report
+    def do_something(self):
+        pass
+
     # compute and on_change functions
 
     @api.depends('offers_ids.price')
@@ -141,3 +148,58 @@ class Property(models.Model):
             self.mature = True
         else:
             self.mature = ''
+
+    # Excel Report
+
+    def action_generate_excel_report(self):
+        # Ensure only one record is processed
+        self.ensure_one()
+
+        # Create an in-memory output file for the Excel file
+        output = io.BytesIO()
+
+        # Create a new Excel file using xlsxwriter
+        workbook = xlsxwriter.Workbook(output, {'in_memory': True})
+        worksheet = workbook.add_worksheet()
+
+        # Add a bold format for headers
+        bold = workbook.add_format({'bold': True})
+
+        # Add column headers
+        worksheet.write('A1', 'Field', bold)
+        worksheet.write('B1', 'Value', bold)
+
+        # Write the record's data to the Excel sheet
+        worksheet.write('A2', 'Name', bold)
+        worksheet.write('B2', self.name or 'N/A')
+
+        worksheet.write('A3', 'Status', bold)
+        worksheet.write('B3', self.state or 0)
+
+        #  Close the workbook after writing
+        workbook.close()
+
+        # Move the file pointer to the start of the in-memory buffer
+        output.seek(0)
+
+        # Read the data from the buffer
+        xls_data = output.read()
+
+        # Encode the data in base64 to store it as an Odoo attachment
+        xls_data_base64 = base64.b64encode(xls_data)
+
+        # Create an attachment record for downloading
+        attachment = self.env['ir.attachment'].create({
+            'name': 'real_estate_report.xlsx',
+            'type': 'binary',
+            'datas': xls_data_base64,
+            'store_fname': 'real_estate_report.xlsx',
+            'mimetype': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        })
+
+        # Return the action to download the file
+        return {
+            'type': 'ir.actions.act_url',
+            'url': '/web/content/%s?download=true' % attachment.id,
+            'target': 'self',
+        }
