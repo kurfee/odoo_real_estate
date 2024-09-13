@@ -54,6 +54,8 @@ class Property(models.Model):
     doc_count = fields.Integer(string=" Documents", store=True)
     approval_count = fields.Integer(string=" Pending Approvals", store=True)
 
+
+
     @api.depends('offers_ids')
     def _compute_offer_count(self):
         """Compute the number of offers for each property"""

@@ -12,15 +12,20 @@
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
+
         'data/tags.xml',
         'data/types.xml',
         'data/properties.xml',
+
+        'views/res_partner.xml',
         'views/offers.xml',
         'views/dashboard.xml',
         'views/property_views.xml',
         'views/estate_tag.xml',
         'views/estate_type.xml',
         'views/property_menus.xml',
+
+
         'reports/property_card.xml',
         'reports/report.xml',
 
