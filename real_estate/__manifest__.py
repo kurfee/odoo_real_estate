@@ -17,6 +17,7 @@
         'data/types.xml',
         'data/properties.xml',
 
+        'views/sequence.xml',
         'views/res_partner.xml',
         'views/offers.xml',
         'views/dashboard.xml',
@@ -24,7 +25,6 @@
         'views/estate_tag.xml',
         'views/estate_type.xml',
         'views/property_menus.xml',
-
 
         'reports/property_card.xml',
         'reports/report.xml',
