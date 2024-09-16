@@ -1,0 +1,30 @@
+<odoo>
+    <!-- Sequence for Customer -->
+    <record id="seq_customer_estate" model="ir.sequence">
+        <field name="name">Customer Sequence</field>
+        <field name="code">res.partner.customer.sequence</field>
+        <field name="prefix">C</field>
+        <field name="padding">4</field>
+    </record>
+
+    <!-- Sequence for Vendor -->
+    <record id="seq_vendor_estate" model="ir.sequence">
+        <field name="name">Vendor Sequence</field>
+        <field name="code">res.partner.vendor.sequence</field>
+        <field name="prefix">V</field>
+        <field name="padding">4</field>
+    </record>
+
+    <record id="seq_customer_id_estate" model="ir.sequence">
+        <field name="name">Customer ID Sequence</field>
+        <field name="code">res.partner.customer.id.sequence</field>
+        <field name="prefix">cus</field>
+        <field name="padding">3</field>
+    </record>
+    <record id="seq_vendor_id_estate" model="ir.sequence">
+        <field name="name">Vendor ID Sequence</field>
+        <field name="code">res.partner.vendor.id.sequence</field>
+        <field name="prefix">Ven</field>
+        <field name="padding">3</field>
+    </record>
+</odoo>
