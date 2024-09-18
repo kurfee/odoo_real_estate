@@ -5,9 +5,10 @@
     'category': 'Business',
     'license': 'LGPL-3',
     'version': '1.0',
-    'depends': ['website',
+    'depends': [
                 'mail',
                 'board',
+                'sale',
                 ],
     'data': [
         'security/ir.model.access.csv',
@@ -18,6 +19,7 @@
         'data/properties.xml',
 
         'views/sequence.xml',
+        'views/quotation_fields.xml',
         'views/res_partner.xml',
         'views/offers.xml',
         'views/dashboard.xml',

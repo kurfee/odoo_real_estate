@@ -7,25 +7,12 @@
             <!-- Add the fields where you want them to appear in the form -->
             <xpath expr="//field[@name='vat']" position="after">
                 <field name="customer_sequence"/>
-                <field name="customer_id"/>
                 <field name="vendor_sequence"/>
             </xpath>
-
             <xpath expr="//page[@name='sales_purchases']//group//field[@name='user_id']" position="before">
-                <!-- Add a new group containing the field before the 'user_id' field -->
                 <field name="customer"/>
+                <field name="vendor"/>
             </xpath>
-
-            <xpath expr="//page[@name='sales_purchases']//group[@name='purchase']" position="inside">
-                <field name="vender"/>
-            </xpath>
-
-            <!--            the customer and vender IDs are added without consent-->
-<!--            <xpath xpr="//field[@name='vat']" position="before">-->
-<!--                -->
-<!--                <field name="vendor_id"/>-->
-<!--            </xpath>-->
-
         </field>
     </record>
 </odoo>
