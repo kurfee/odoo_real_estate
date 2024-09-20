@@ -10,9 +10,11 @@ from odoo.http import request
 class Property(models.Model):
     _name = 'real.estate'
     _description = 'Real Estate Property'
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _order = 'sequence'
 
+
+    activity_ids = fields.One2many('mail.activity', 'res_id', string='Activities')
     name = fields.Char(required=True, string="Property Name", tracking=True)
     description = fields.Text(string="Description")
     postcode = fields.Char(string="Postal Code", size=6)  # Restricting length to 6 characters
@@ -42,19 +44,15 @@ class Property(models.Model):
             ('sold', 'Sold'),
         ],
         tracking=True, string="Status")
-
     property_type_ids = fields.Many2one("estate.property.type", string="Property Type")
     buyer_ids = fields.Many2one("res.partner", string="Buyer")
     salesperson_ids = fields.Many2one("res.users", string="SalesPerson", default=lambda self: self.env.user)
     tags_ids = fields.Many2many("estate.property.tag", string="Tags")
     sequence = fields.Integer(string='Sequence')
-
     # New fields to store the number of smart buttons acctions
     offer_count = fields.Integer(string=" Offers", compute="_compute_offer_count", store=True)
     doc_count = fields.Integer(string=" Documents", store=True)
     approval_count = fields.Integer(string=" Pending Approvals", store=True)
-
-
 
     @api.depends('offers_ids')
     def _compute_offer_count(self):

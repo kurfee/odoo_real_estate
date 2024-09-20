@@ -8,7 +8,7 @@
             <!-- Example of adding fields after a specific field -->
             <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
                 <field name="quotation_price"/>
-                <field name="quotation_date" />
+                <field name="quotation_date"/>
             </xpath>
         </field>
     </record>
