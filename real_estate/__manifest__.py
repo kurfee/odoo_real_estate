@@ -22,6 +22,7 @@
         'views/quotation_fields.xml',
         'views/res_partner.xml',
         'views/offers.xml',
+        'views/sale_order.xml',
         'views/dashboard.xml',
         'views/property_views.xml',
         'views/estate_tag.xml',
